@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence, useScroll, useTransform, useMotionValue, useSpring, useAnimation, PanInfo } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Montserrat, Playfair_Display } from 'next/font/google';
@@ -84,7 +84,7 @@ const ParticleBackground = () => {
           let rot = Math.PI / 2 * 3;
           let x = particle.x;
           let y = particle.y;
-          let step = Math.PI / spikes;
+          const step = Math.PI / spikes;
 
           ctx.beginPath();
           ctx.moveTo(x, y - outerRadius);
@@ -209,7 +209,6 @@ const itemVariants = {
 const GallerySection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
   const [imageError, setImageError] = useState<{[key: string]: boolean}>({});
   
   const images = [
@@ -267,7 +266,6 @@ const GallerySection = () => {
         setCurrentIndex(currentIndex + 1);
       }
     }
-    setIsDragging(false);
   };
 
   const handleImageError = (imageId: number) => {
@@ -344,7 +342,6 @@ const GallerySection = () => {
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={0.7}
-              onDragStart={() => setIsDragging(true)}
               onDragEnd={handleDragEnd}
               className="absolute inset-0 cursor-grab active:cursor-grabbing"
             >
@@ -354,10 +351,12 @@ const GallerySection = () => {
                   {/* Image Area */}
                   <div className="relative w-full h-[80%] overflow-hidden bg-gray-100">
                     {!imageError[images[currentIndex].id] ? (
-                      <img
+                      <Image
                         src={images[currentIndex].src}
                         alt={images[currentIndex].title}
                         className="w-full h-full object-cover"
+                        width={800}
+                        height={600}
                         onError={() => handleImageError(images[currentIndex].id)}
                       />
                     ) : (
@@ -586,7 +585,7 @@ export default function Home() {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  }, [mouseX, mouseY]);
 
   useEffect(() => {
     AOS.init({
@@ -888,7 +887,7 @@ export default function Home() {
               >
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent rounded-lg"></div>
                 <p className="text-gray-200 font-montserrat italic text-lg relative z-10">
-                  "A journey of self-discovery through the mystical landscapes of Eastern Tibet"
+                  &quot;A journey of self-discovery through the mystical landscapes of Eastern Tibet&quot;
                 </p>
               </motion.div>
             </motion.div>
@@ -988,7 +987,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold font-playfair">Production Details</h3>
                 <p className="text-gray-300 font-montserrat leading-relaxed">
-                  The $3 million animated feature is written, directed, and produced by Tan Keng Leck of Singapore's Hwallywood Studio, adapted from Fan Wen's acclaimed novel. Animation production is handled by Indonesia's MSV.
+                  The $3 million animated feature is written, directed, and produced by Tan Keng Leck of Singapore&apos;s Hwallywood Studio, adapted from Fan Wen&apos;s acclaimed novel. Animation production is handled by Indonesia&apos;s MSV.
                 </p>
                 <div className="pt-4">
                   <a href="https://www.imdb.com/title/tt21257852/" 
