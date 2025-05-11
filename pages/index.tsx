@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useScroll, useTransform, useMotionValue, useSp
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Montserrat, Playfair_Display } from 'next/font/google';
+import Image from 'next/image';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -961,7 +962,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold font-playfair">Voice Cast Announced</h3>
                 <p className="text-gray-300 font-montserrat leading-relaxed">
-                  The film features an impressive voice cast including Armand Assante (HBO's "Gotti"), Alexander Wraith ("The Mandalorian"), and Louis Mandylor ("Debt Collector"), bringing the characters to life in this epic tale.
+                  The film features an impressive voice cast including Armand Assante (HBO&apos;s &quot;Gotti&quot;), Alexander Wraith (&quot;The Mandalorian&quot;), and Louis Mandylor (&quot;Debt Collector&quot;), bringing the characters to life in this epic tale.
                 </p>
                 <div className="pt-4">
                   <a href="https://variety.com/2022/film/asia/tibet-animation-film-land-of-mercy-armand-assante-alexander-wraith-1235313248/" 
@@ -1160,10 +1161,12 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl backdrop-blur-sm border border-white/10 group-hover:border-white/20 transition-all duration-300"></div>
               <div className="relative p-8 space-y-6">
                 <div className="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-300">
-                  <img
+                  <Image
                     src="/Merch1.avif"
                     alt="Land of Mercy Animals Print"
                     className="w-full h-full object-cover"
+                    width={800}
+                    height={1067}
                   />
                 </div>
                 <div className="space-y-4">
@@ -1172,8 +1175,8 @@ export default function Home() {
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Available Sizes:</h4>
                     <div className="space-y-1">
-                      <p className="text-gray-300 font-montserrat">M (Shoulder 17"/Chest 40"/Length 28")</p>
-                      <p className="text-gray-300 font-montserrat">XL (Shoulder 24"/Chest 48"/Length 29")</p>
+                      <p className="text-gray-300 font-montserrat">M (Shoulder 17&quot;/Chest 40&quot;/Length 28&quot;)</p>
+                      <p className="text-gray-300 font-montserrat">XL (Shoulder 24&quot;/Chest 48&quot;/Length 29&quot;)</p>
                     </div>
                   </div>
                 </div>
@@ -1190,10 +1193,12 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl backdrop-blur-sm border border-white/10 group-hover:border-white/20 transition-all duration-300"></div>
               <div className="relative p-8 space-y-6">
                 <div className="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden group-hover:scale-[1.02] transition-transform duration-300">
-                  <img
+                  <Image
                     src="/Merch2.avif"
                     alt="Land of Mercy Yama Messenger Print"
                     className="w-full h-full object-cover"
+                    width={800}
+                    height={1067}
                   />
                 </div>
                 <div className="space-y-4">
@@ -1202,8 +1207,8 @@ export default function Home() {
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Available Sizes:</h4>
                     <div className="space-y-1">
-                      <p className="text-gray-300 font-montserrat">M (Shoulder 17"/Chest 40"/Length 28")</p>
-                      <p className="text-gray-300 font-montserrat">XL (Shoulder 24"/Chest 48"/Length 29")</p>
+                      <p className="text-gray-300 font-montserrat">M (Shoulder 17&quot;/Chest 40&quot;/Length 28&quot;)</p>
+                      <p className="text-gray-300 font-montserrat">XL (Shoulder 24&quot;/Chest 48&quot;/Length 29&quot;)</p>
                     </div>
                   </div>
                 </div>
