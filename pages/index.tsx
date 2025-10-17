@@ -231,25 +231,25 @@ const GallerySection = () => {
     // Placeholder for future images
     { 
       id: 3, 
-      src: "/placeholder.jpg", 
-      title: "Coming Soon", 
+      src: "/webpict3.PNG", 
+      title: "", 
       description: "More moments from the film",
       rotation: -1,
       zIndex: 3
     },
     { 
       id: 4, 
-      src: "/placeholder.jpg", 
-      title: "Coming Soon", 
-      description: "Behind the scenes",
+      src: "/webpict4.PNG", 
+      title: "", 
+      description: "More moments from the film",
       rotation: 2,
       zIndex: 4
     },
     { 
       id: 5, 
-      src: "/placeholder.jpg", 
+      src: "/webpict5.PNG", 
       title: "Coming Soon", 
-      description: "Character designs",
+      description: "More moments from the film",
       rotation: -3,
       zIndex: 5
     }
